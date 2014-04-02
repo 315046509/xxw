@@ -1,0 +1,23 @@
+#demo {
+    background: #FFF;
+    overflow: hidden;
+    border: 1px dashed #CCC;
+    width: 500px;
+}
+
+#demo img {
+    border: 3px solid #F2F2F2;
+}
+
+#indemo {
+    float: left;
+    width: 1000%;
+}
+
+#demo1 {
+    float: left;
+}
+
+#demo2 {
+    float: left;
+}

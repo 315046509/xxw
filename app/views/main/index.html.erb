@@ -1,0 +1,86 @@
+<script>
+    <% if flash[:error_msg]%>
+    alert('<%=flash[:error_msg]%>');
+    <% end%>
+</script>
+<div class="inuoo">
+  <div class="headder">
+    <div class="box">
+      <div class="head_mian">
+        <div class="logo">
+          <a href="<%= root_path %>" title="网站名称" id="web_logo">
+            <img src="/images/1395818901.jpg" alt="网站名称" title="网站名称" style="margin:0px 0px 0px 0px;">
+          </a>
+        </div>
+        <%= render 'common/navigation' %>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="index_top">
+      <div class="index_mainn">
+        <div class="flash">
+          <div id="apDiv1">
+            <a href="#"><img src="/images/hd2.jpg" width="340" height="167" border="0" align="right" usemap="#Map"/>
+              <map name="Map" id="Map">
+                <area shape="poly" coords="286,59,255,99,288,138,320,100" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="214,59,183,99,216,138,248,100" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="141,59,110,99,143,138,175,100" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="70,59,39,99,72,138,104,100" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="248,15,217,55,250,94,282,56" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="176,15,145,55,178,94,210,56" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="106,15,75,55,105,94,139,57" href="<%= campus_main_index_path %>"/>
+                <area shape="poly" coords="34,16,4,54,34,93,68,56" href="<%= campus_main_index_path %>"/>
+              </map>
+            </a>
+            <%= render 'common/hdp' %>
+            <a href="<%= campus_main_index_path %>">
+              <img src="/images/hd1.jpg" width="288" height="410"/>
+            </a>
+          </div>
+        </div>
+      </div>
+      <%= render 'common/login' %>
+    </div>
+  </div>
+  <div class="index_main">
+    <div class="box">
+      <div class="index_bottom">
+        <div class="index_bt_left">
+          <div class="index_bt_lf_top">
+            <a href="<%= campus_main_index_path %>"><img src="/images/xinxiaowei_07.jpg"></a>
+          </div>
+
+          <%= render 'common/lunzhuan' %>
+
+          <div class="index_bt_lf_bottom">
+            <div class="lf_bt_img">
+              <a href="<%= campus_main_index_path %>"><img src="/images/xinxue_07.jpg"></a>
+            </div>
+            <div class="lf_bt_ul">
+              <ul>
+                <li>
+                  <a href="<%= campus_main_index_path %>"><img src="/images/xudd_15.jpg"></a>
+                </li>
+                <li>
+                  <a href="<%= campus_main_index_path %>"><img src="/images/gaokao_15.jpg"></a>
+                </li>
+                <li>
+                  <a href="<%= campus_main_index_path %>"><img src="/images/chu_15.jpg"></a>
+                </li>
+                <li>
+                  <a href="<%= campus_main_index_path %>"><img src="/images/chuzhong_15.jpg"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <%= render 'common/tianjiao' %>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--               QQ   代码 开始                   -->
+  <%= render 'common/kefu' %>
+  <!-- 代码 结束 -->
+</div>

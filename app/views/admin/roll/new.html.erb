@@ -1,0 +1,74 @@
+<script>
+    <% if !flash[:error_msg].nil? && !flash[:error_msg].blank?%>
+    alert('<%=flash[:error_msg]%>');
+    <% end%>
+</script>
+
+<div class="row-fluid sortable">
+  <div class="box span12">
+    <div class="box-header well" data-original-title>
+      <h2><i class="icon-list-alt"></i>添加轮转</h2>
+
+      <div class="box-icon">
+        <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+        <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+        <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+      </div>
+    </div>
+    <div class="box-content">
+      <div id="content" class="span10" style="padding: 20px">
+        <%= form_for @roll, :url => admin_roll_index_path(@roll), :method => :post, :html => {:id => "roll"} do |f| %>
+            <% if @roll.errors.any? %>
+                <div id="error_explanation" style="color: red">
+                  <p>错误:</p>
+                  <ul>
+                    <% @roll.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+            <div class="field">
+              <span>图片：</span>
+              <%= f.file_field :avatar %>
+            </div>
+            <div class="field">
+              <span>链接：</span>
+              <%= f.text_field :url %>
+            </div>
+            </br>
+            <div class="actions" style="padding-left: 150px">
+              <%= f.submit "提交" %>
+            </div>
+        <% end %>
+        <!--/span-->
+      </div>
+    </div>
+  </div>
+</div><!--/row-->
+<script>
+    $().ready(function () {
+        $("#roll").validate({
+            rules: {
+                "roll[avatar]": {
+                    required: true,
+                    accept: "jpg|png"
+                },
+                "roll[url]": {
+                    required: true
+                }
+            },
+            messages: {
+                "roll[avatar]": {
+                    required: "请上传图片",
+                    accept: "图片类型必须是png或jpg"
+                },
+                "roll[url]": {
+                    required: "请填写链接地址"
+                }
+            }
+        });
+    });
+</script>
+
+

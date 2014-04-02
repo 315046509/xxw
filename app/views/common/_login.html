@@ -1,0 +1,109 @@
+<div class="index_right">
+    <div class="index_rt_img">
+        <img src="/images/baoming_07.jpg">
+        <img class="imgg" src="/images/diyibu_07.jpg">
+        <img class="imgga" src="/images/spa1_07.jpg">
+    </div>
+    <%= form_for(:member, :url => user_create_main_index_path, :method => :post, :html => {:id =>
+    "user_signup"}) do |f| %>
+    <table class="feedback_table">
+        <tbody>
+        <tr>
+            <td class="text">真实姓名</td>
+            <td class="input">
+                <input name="member[name]" type="text" size="30" class="input-text">
+                <span class="info">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="text">邮箱地址</td>
+            <td class="input">
+                <input name="member[email]" type="text" size="30" class="input-text">
+                <span class="info">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="text">手机电话</td>
+            <td class="input">
+                <input name="member[tel]" type="text" size="30" class="input-text">
+                <span class="info">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="text">家庭住址</td>
+            <td class="input">
+                <input name="member[address]" type="text" size="30" class="input-text">
+                <span class="info">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="text">选择性别</td>
+            <td class="input">
+                <%= f.select :sex_id, options_for_select(Member::SEX_CATEGORYS) %>
+                <span class="info">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="text"></td>
+            <td class="submint">
+                <input type="hidden" name="fdtitle" value="在线反馈">
+                <input type="hidden" name="lang" value="cn">
+                <input type="hidden" name="ip" value="58.53.2.7">
+                <input type="hidden" name="totnum" value="4">
+                <input type="hidden" name="id" value="31">
+                <input type="hidden" name="fid_url" value="1">
+                <input type="submit" name="Submit" value="确认" class="submit button orange"></td>
+        </tr>
+        </tbody>
+    </table>
+    <% end %>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                $("#user_signup").validate({
+                    rules: {
+                        "member[name]": {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 20
+                        },
+                        "member[email]": {
+                            required: true
+                        },
+                        "member[tel]": {
+                            required: true,
+                            mobile: true,
+                            rangelength: [11, 11]
+                        },
+                        "member[address]": {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        "member[name]": {
+                            required: "请输真实姓名",
+                            minlength: "请输真实姓名",
+                            maxlength: "请输真实姓名"
+                        },
+                        "member[email]": {
+                            required: "请输入邮箱地址"
+                        },
+                        "member[tel]": {
+                            required: "手机不能为空！",
+                            mobile: "手机格式不正确!",
+                            rangelength: "请输入正确的手机号码！"
+                        },
+                        "member[address]": {
+                            required: "家庭住址不能为空！"
+                        }
+                    },
+                    errorPlacement: function (error, element) {
+                        error.appendTo(element.parent());
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+<div class="clear"></div>
+

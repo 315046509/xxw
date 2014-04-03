@@ -1,6 +1,9 @@
 class MainController < ApplicationController
   def index
-    @rolls = Roll.all
+    @category_1_name = Roll.question_category_name(1)
+    @category_1_questions = Roll.where({:question_category_id => 1})
+    @category_2_name = Roll.question_category_name(2)
+    @category_2_questions = Roll.where({:question_category_id => 2})
   end
 
   def user_create

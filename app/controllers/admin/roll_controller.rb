@@ -33,6 +33,6 @@ class Admin::RollController < ApplicationController
   end
 
   def roll_params
-    params.require(:roll).permit(:avatar, :url)
+    params.require(:roll).permit(:avatar, :url, :question_category_id)
   end
 end

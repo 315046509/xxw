@@ -1,0 +1,63 @@
+
+body, div, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+a {
+    blr: expression(this.onFocus=this.blur());
+    outline: none;
+}
+
+.www51buycom {
+    width: 342px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.www51buycom .num {
+    overflow: hidden;
+    height: 130px;
+    position: absolute;
+    bottom: 12px;
+    left: 110px;
+    zoom: 1;
+    z-index: 3
+}
+
+.www51buycom .num li {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #444444;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: left;
+}
+
+.www51buycom .num li.on {
+    background: #FF7700;
+}
+
+.www51buycom .prev {
+    left: 0;
+}
+
+.www51buycom .next {
+    right: 0;
+    background-position: right
+}

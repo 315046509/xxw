@@ -28,13 +28,24 @@
                   </ul>
                 </div>
             <% end %>
-            <div class="field">
-              <span>图片：</span>
-              <%= f.file_field :avatar %>
+            <div class="codeExplanation">
+              <p>建议幻灯片图片尺寸：330x220，轮转图片尺寸：220x160</p>
             </div>
             <div class="field">
-              <span>链接：</span>
-              <%= f.text_field :url %>
+              <span>图片分类：</span>
+              <%= f.select :question_category_id, options_for_select(Roll::QUESTION_CATEGORYS) %>
+            </div>
+            <br/>
+
+            <div class="field">
+              <span>选择图片：</span>
+              <%= f.file_field :avatar %>
+            </div>
+            <br/>
+
+            <div class="field">
+              <span>图片链接：</span>
+              <%= f.text_field :url, :value => '#' %>
             </div>
             </br>
             <div class="actions" style="padding-left: 150px">

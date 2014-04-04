@@ -2,7 +2,7 @@ class Admin::JournalismsController < ApplicationController
   layout 'admin'
 
   def index
-    @journalisms = Journalism.ct_desc.page(params[:page]).per(20)
+    @journalisms = Journalism.order_id_desc.page(params[:page]).per(20)
   end
 
   def new
@@ -26,21 +26,6 @@ class Admin::JournalismsController < ApplicationController
 
   def show
     @journalism = Journalism.find params[:id]
-  end
-
-  def edit
-  end
-
-  def update
-    @journalism = Journalism.find params[:id]
-    update_res = @journalism.update_attributes(
-        {
-            :title => params[:title],
-            :descrpiton => params[:descrpiton]
-        })
-    if update_res
-      redirect_to admin_journalisms_path and return
-    end
   end
 
   #   删除

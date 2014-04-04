@@ -4,6 +4,8 @@ class MainController < ApplicationController
     @category_1_questions = Roll.where({:question_category_id => 1})
     @category_2_name = Roll.question_category_name(2)
     @category_2_questions = Roll.where({:question_category_id => 2})
+    @category_4_name = Journalism.question_category_name(4)
+    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
   end
 
   def user_create

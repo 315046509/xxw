@@ -1,16 +1,19 @@
 <div class="index_bt_right">
     <div class="index_bt_rt_ma">
         <div class="index_ma_top">
-            <a href="#" class="index_ma_top_a">申请条件</a>
-            <a href="#" class="index_ma_top_ab">conditions apply</a>
+            <a href="#" class="index_ma_top_a">报名条件</a>
+            <a href="#" class="index_ma_top_ab">Registration Conditions</a>
         </div>
         <div class="index_ma_center">
             <ol class="list-none metlist">
-                <li class="list top">
-                    <a href="#" title="有中国国籍" target="_self">有中国国籍</a>
-                </li>
                 <li class="list ">
                     <a href="#" title="12-50周岁" target="_self">12-50周岁</a>
+                </li>
+                <li class="list top">
+                    <a href="#" title="有效的身份证" target="_self">有效的身份证</a>
+                </li>
+                <li class="list ">
+                    <a href="#" title="有效的联系方式及地址" target="_self">有效的联系方式及地址</a>
                 </li>
             </ol>
         </div>
@@ -18,20 +21,16 @@
 
     <div class="index_bt_rt_ma">
         <div class="index_ma_top">
-            <a href="#" class="index_ma_top_a">所需材料</a>
-            <a href="#" class="index_ma_top_ab">Materials needed</a>
+            <a href="#" class="index_ma_top_a">校内新闻</a>
+            <a href="#" class="index_ma_top_ab">School News</a>
         </div>
         <div class="index_ma_center">
             <ol class="list-none metlist">
+                <% @category_4_questions.each do |j| %>
                 <li class="list top">
-                    <a href="#" title="有效的身份证" target="_self">有效的身份证</a>
+                    <%= link_to truncate_u(j.title, 10), school_news_path(j)%>
                 </li>
-                <li class="list ">
-                    <a href="#" title="有效的联系方式及地址" target="_self">有效的联系方式及地址</a>
-                </li>
-                <li class="list ">
-                    <a href="#" title="相关学籍" target="_self">相关学籍</a>
-                </li>
+                <% end %>
             </ol>
         </div>
     </div>

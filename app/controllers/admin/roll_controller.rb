@@ -4,7 +4,7 @@ class Admin::RollController < ApplicationController
   before_filter :get_roll, only: [:destroy]
 
   def index
-    @roll = Roll.all.order("id desc").page(params[:page]).per(10)
+    @roll = Roll.all.order("id desc").page(params[:page]).per(5)
   end
 
   def new

@@ -10,6 +10,8 @@ Xxw::Application.routes.draw do
       get 'contact_us'
     end
   end
+  # 新闻
+  resources :school_news
   namespace :admin do
     match '' => 'accounts#index', :via => :get
     match '/login' => 'main#login', :via => :get

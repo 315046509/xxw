@@ -25,6 +25,8 @@
     <div class="box-content">
       <%= form_for(:journalism, :url => admin_journalisms_path, :id => "verifytitle", :class => "form-horizontal") do |f| %>
           <legend>信息添加</legend>
+          <%= f.label "信息标题：" %>
+          <%= f.text_field :title %>
           <%= f.label "信息分类：" %>
           <%= f.select :question_category_id, options_for_select(Journalism::QUESTION_CATEGORYS) %>
           <%= f.label "信息内容：" %>

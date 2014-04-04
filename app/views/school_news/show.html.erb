@@ -20,16 +20,27 @@
     <div class="index_top">
       <div class="index_mainn">
         <table width="600" border="0">
+          <div>
+            <ul class="breadcrumb">
+              <li>
+                <a href="/">首页</a> <span class="divider">/</span>
+              </li>
+              <li>
+                <a href="<%= school_news_index_path %>">新闻列表</a> <span class="divider">/</span>
+              </li>
+              <li>
+                标题：<%= @journalism.title %>
+              </li>
+            </ul>
+          </div>
           <tr>
             <td>
               <div class="flash">
-                <% @category_2_questions.each do |j| %>
-                    <li>
-                      <h2><%= j.title %></h2>
+                <ul class="breadcrumb">
+                  <h2><%= @journalism.title %></h2>
 
-                      <p><%= j.descrpiton.html_safe %></p>
-                    </li>
-                <% end %>
+                  <p><%= @journalism.descrpiton.html_safe %></p>
+                </ul>
               </div>
             </td>
           </tr>

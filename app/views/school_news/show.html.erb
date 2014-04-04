@@ -1,0 +1,55 @@
+<script>
+    <% if flash[:error_msg]%>
+    alert('<%=flash[:error_msg]%>');
+    <% end%>
+</script>
+<div class="inuoo">
+  <div class="headder">
+    <div class="box">
+      <div class="head_mian">
+        <div class="logo">
+          <a href="http://inuoos.demo.inuoo.com/" title="网站名称" id="web_logo">
+            <img src="/images/logo200.png" alt="网站名称" title="网站名称" style="margin:-20px 0px 0px 0px;">
+          </a>
+        </div>
+        <%= render 'common/navigation' %>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="index_top">
+      <div class="index_mainn">
+        <table width="600" border="0">
+          <div>
+            <ul class="breadcrumb">
+              <li>
+                <a href="/">首页</a> <span class="divider">/</span>
+              </li>
+              <li>
+                <a href="<%= school_news_index_path %>">新闻列表</a> <span class="divider">/</span>
+              </li>
+              <li>
+                标题：<%= @journalism.title %>
+              </li>
+            </ul>
+          </div>
+          <tr>
+            <td>
+              <div class="flash">
+                <ul class="breadcrumb">
+                  <h2><%= @journalism.title %></h2>
+
+                  <p><%= @journalism.descrpiton.html_safe %></p>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <%= render 'common/login' %>
+    </div>
+  </div>
+  <!--               QQ   代码 开始                   -->
+  <%= render 'common/kefu' %>
+  <!-- 代码 结束 -->
+</div>

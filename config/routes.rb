@@ -12,6 +12,9 @@ Xxw::Application.routes.draw do
   end
   # 新闻
   resources :school_news
+  # 作品展示
+  resources :works_show
+  # 后台管理
   namespace :admin do
     match '' => 'accounts#index', :via => :get
     match '/login' => 'main#login', :via => :get

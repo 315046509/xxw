@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  scope :order_ct_desc, lambda{order("created_at DESC")}
+  scope :order_ct_desc, lambda { order("created_at DESC") }
   validates :name, :presence => {:message => "姓名不能为空，"},
             :length => {:minimum => 2, :maximum => 20, :message => "请填写真实姓名"}
 

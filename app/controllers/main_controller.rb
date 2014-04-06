@@ -36,18 +36,24 @@ class MainController < ApplicationController
   def campus
     # 学校简介
     @category_1_name = Journalism.question_category_name(1)
-    @category_1_questions = Journalism.where({:question_category_id => 1})
+    @category_1_questions = Journalism.where({:question_category_id => 1}).page(params[:page]).per(1)
+    @category_4_name = Journalism.question_category_name(4)
+    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
   end
 
   def teacher
     # 教师简介
     @category_2_name = Journalism.question_category_name(2)
     @category_2_questions = Journalism.where({:question_category_id => 2})
+    @category_4_name = Journalism.question_category_name(4)
+    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
   end
 
   def contact_us
     # 联系我们
     @category_3_name = Journalism.question_category_name(3)
     @category_3_questions = Journalism.where({:question_category_id => 3})
+    @category_4_name = Journalism.question_category_name(4)
+    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
   end
 end

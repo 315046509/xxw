@@ -837,7 +837,6 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
     color: #000000;
     text-decoration: none;
     font-size: 15px;
-    font-weight: bold
 }
 
 .index_bt_right .index_bt_rt_ma .index_ma_center ul {
@@ -1331,7 +1330,7 @@ a:hover {
 }
 
 p {
-    margin: 0 0 9px;
+    color: #000000;
 }
 
 p small {

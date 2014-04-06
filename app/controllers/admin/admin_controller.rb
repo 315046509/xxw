@@ -1,13 +1,15 @@
 class Admin::AdminController < ApplicationController
-before_filter :admin_login_filter,:except => [:login, :check_login]
-before_filter :admin_logined_filter,:only => [:login]
+  before_filter :admin_login_filter, :except => [:login, :check_login]
+  before_filter :admin_logined_filter, :only => [:login]
+  before_filter :browser_filter
 
-def browser_filter
-  if !(request.headers["User-Agent"].include?("Chromium") || request.headers['User-Agent'].include?("Chrome") ||
-      request.headers['User-Agent'].include?("Firefox"))
-    redirect_to "/" 
+  def browser_filter
+    if !(request.headers["User-Agent"].include?("Chromium") || request.headers['User-Agent'].include?("Chrome") ||
+        request.headers['User-Agent'].include?("Firefox"))
+      redirect_to google_ie_index_path and return
+    end
   end
-end
+
   # 未登录过滤
   def admin_login_filter
     if session[:admin_id].nil?

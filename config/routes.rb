@@ -14,6 +14,8 @@ Xxw::Application.routes.draw do
   resources :school_news
   # 作品展示
   resources :works_show
+  # 强制使用google浏览器
+  resources :google_ie
   # 后台管理
   namespace :admin do
     match '' => 'accounts#index', :via => :get

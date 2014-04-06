@@ -12,9 +12,9 @@
 /*解决IE6下滚动抖动的问题*/
 /*解决IE6下不兼容 position:fixed 的问题*/
 #code, #code_hover, #gotop {
-    width: 36px;
-    height: 48px;
-    background: url(../images/icon.png) no-repeat;
+    width: 41px;
+    height: 51px;
+    background: url(../images/icon01.png) no-repeat;
     position: fixed;
     left: 50px;
     cursor: pointer;
@@ -24,27 +24,27 @@
 }
 
 #code {
-    background-position: -276px -258px;
+    background-position: -2px -258px;
     bottom: 120px;
     _margin-bottom: 120px;
 }
 
 #code_hover {
-    background-position: -316px -258px;
+    background-position: -2px -258px;
     bottom: 120px;
     _margin-bottom: 120px;
 }
 
 #gotop {
-    background-position: -276px -310px;
+    background-position: -42px -310px;
     bottom: 67px;
     _margin-bottom: 67px;
 }
 
 #code_img {
-    width: 270px;
+    width: 580px;
     height: 355px;
-    background: url(../images/icon.png) -4px -3px no-repeat;
+    background: url(../images/icon01.png) -80px -3px no-repeat;
     position: fixed;
     left: 90px;
     bottom: 67px;

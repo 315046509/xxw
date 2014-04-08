@@ -6,44 +6,38 @@
 <div class="inuoo">
   <%= render 'common/navigation' %>
   <div class="box">
-    <div class="container">
-      <div class="content">
-
-        <div id="rg-gallery" class="rg-gallery">
-          <div class="rg-thumbs">
-            <!-- Elastislide Carousel Thumbnail Viewer -->
-            <div class="es-carousel-wrapper">
-              <div class="es-nav">
-                <span class="es-nav-prev">Previous</span>
-                <span class="es-nav-next">Next</span>
-              </div>
-              <div class="es-carousel">
-                <ul>
-                  <% if @category_3_questions.count>0 %>
-                      <% for i in 1..@category_3_questions.length-1 %>
-                          <li>
-                            <a href="<%= @category_3_questions[i-1].url %>">
-                              <img src="<%= @category_3_questions[i-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[i-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉学员作品展示"/>
-                            </a>
-                          </li>
-                      <% end %>
+    <div id="rg-gallery" class="rg-gallery">
+      <div class="rg-thumbs">
+        <!-- Elastislide Carousel Thumbnail Viewer -->
+        <div class="es-carousel-wrapper">
+          <div class="es-nav">
+            <span class="es-nav-prev">Previous</span>
+            <span class="es-nav-next">Next</span>
+          </div>
+          <div class="es-carousel">
+            <ul>
+              <% if @category_3_questions.count>0 %>
+                  <% for i in 1..@category_3_questions.length-1 %>
                       <li>
-                        <a href="<%= @category_3_questions[-1].url %>">
-                          <img src="<%= @category_3_questions[-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉学员作品展示"/>
+                        <a href="<%= @category_3_questions[i-1].url %>">
+                          <img src="<%= @category_3_questions[i-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[i-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉学员作品展示"/>
                         </a>
                       </li>
                   <% end %>
-                </ul>
-              </div>
-            </div>
-            <!-- End Elastislide Carousel Thumbnail Viewer -->
+                  <li>
+                    <a href="<%= @category_3_questions[-1].url %>">
+                      <img src="<%= @category_3_questions[-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉学员作品展示"/>
+                    </a>
+                  </li>
+              <% end %>
+            </ul>
           </div>
-          <!-- rg-thumbs -->
         </div>
-        <!-- rg-gallery -->
+        <!-- End Elastislide Carousel Thumbnail Viewer -->
       </div>
-      <!-- content -->
+      <!-- rg-thumbs -->
     </div>
+    <!-- rg-gallery -->
     <!-- container -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.tmpl.min.js"></script>
@@ -51,11 +45,8 @@
     <script type="text/javascript" src="../js/jquery.elastislide.js"></script>
     <script type="text/javascript" src="../js/gallery.js"></script>
   </div>
-  <!--               QQ   代码 开始                   -->
-  <%= render 'common/kefu' %>
-  <!-- 代码 结束 -->
 </div>
-<%= render 'common/footer' %>
-
-
+<!--               QQ   代码 开始                   -->
+<%= render 'common/kefu' %>
+<!-- 代码 结束 -->
 

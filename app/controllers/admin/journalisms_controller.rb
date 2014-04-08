@@ -24,6 +24,26 @@ class Admin::JournalismsController < ApplicationController
     end
   end
 
+  def edit
+    @journalism = Journalism.find(params[:id])
+  end
+
+  def update
+    @category = Journalism.find(params[:id])
+    update_category = @category.update_attributes(
+        :title => params[:journalism][:title],
+        :descrpiton => params[:journalism][:descrpiton],
+        :question_category_id => params[:journalism][:question_category_id]
+    )
+    if update_category
+      respond_to do |category|
+        category.html {
+          redirect_to admin_journalisms_path and return
+        }
+      end
+    end
+  end
+
   def show
     @journalism = Journalism.find params[:id]
   end

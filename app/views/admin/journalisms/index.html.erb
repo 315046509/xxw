@@ -28,6 +28,7 @@
           <th>分类</th>
           <th>创建时间</th>
           <th>详细</th>
+          <th>修改</th>
           <th>删除</th>
         </tr>
         </thead>
@@ -39,6 +40,7 @@
               <td><%= q.question_category_name %></td>
               <td class="center"><%= my_datetime_format q.created_at %></td>
               <td class="center"><%= link_to "详细", admin_journalism_path(q) %></td>
+              <td><%= link_to '修改', edit_admin_journalism_path(q) %></td>
               <td><%= link_to '删除', admin_journalism_path(q), :method => :delete, :confirm => "您确定要删除吗?" %></td>
             </tr>
         <% end %>

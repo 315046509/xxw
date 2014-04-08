@@ -5,8 +5,12 @@ Xxw::Application.routes.draw do
     collection do
       post 'user_create'
       get 'check_login'
-      get 'campus'
-      get 'teacher'
+      get 'panoramic_campus'
+      get 'school_activities'
+      get 'transcript'
+      get 'school_culture'
+      get 'teacher_charisma'
+      get 'at_query'
       get 'contact_us'
     end
   end

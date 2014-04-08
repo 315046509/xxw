@@ -1,32 +1,43 @@
-<div id="qq_icon"></div>
-<div id="cs_online">
-  <ul class='qq_context'>
-    <li>
-      <p>新校尉教育01：<span class='qq_num'></span></p>
-    </li>
-    <li>
-      <p>新校尉教育02：<span class='qq_num'></span></p>
-    </li>
-    <li>
-      <p>新校尉教育03：<span class='qq_num'></span></p>
-    </li>
-    <li>
-      <p>新校尉教育04：<span class='qq_num'></span></p>
-    </li>
-    <li>
-      <p>新校尉教育05：<span class='qq_num'></span></p>
-    </li>
-  </ul>
-</div>
-<script type="text/javascript">
-    myEvent(window, 'load', function () {
-        dealy('qq_icon', 1);						//1秒后显示QQ图标，默认为1秒，可自行设置
-        settop('qq_icon', 'cs_online', 150);		//设置在线客服的高度，默认150，可自行设置
-        var span_q = getbyClass('cs_online', 'qq_num');
-        setqq(span_q, ['1632814245', '1632814245', '1632814245', '1632814245', '1632814245']);		//填写5个QQ号码
-        click_fn('qq_icon', 'cs_online');
-    });
-</script>
+<LINK rel=stylesheet type=text/css href="../css/common.css">
+<SCRIPT type=text/javascript src="../js/jquery.js"></SCRIPT>
+<SCRIPT type=text/javascript src="../js/kefu.js"></SCRIPT>
+<DIV id=floatTools class=float0831>
+  <DIV class=floatL>
+    <A style="DISPLAY: none" id=aFloatTools_Show class=btnOpen
+       title=查看在线客服
+       onclick="javascript:$('#divFloatToolsView').animate({width: 'show', opacity: 'show'}, 'normal',function(){ $('#divFloatToolsView').show();kf_setCookie('RightFloatShown', 0, '', '/', 'www.istudy.com.cn'); });$('#aFloatTools_Show').attr('style','display:none');$('#aFloatTools_Hide').attr('style','display:block');"
+       href="javascript:void(0);">展开
+    </A>
+    <A id=aFloatTools_Hide class=btnCtn
+       title=关闭在线客服
+       onclick="javascript:$('#divFloatToolsView').animate({width: 'hide', opacity: 'hide'}, 'normal',function(){ $('#divFloatToolsView').hide();kf_setCookie('RightFloatShown', 1, '', '/', 'www.istudy.com.cn'); });$('#aFloatTools_Show').attr('style','display:block');$('#aFloatTools_Hide').attr('style','display:none');"
+       href="javascript:void(0);">收缩
+    </A>
+  </DIV>
+  <DIV id=divFloatToolsView class=floatR>
+    <DIV class=tp></DIV>
+    <DIV class=cn>
+      <UL>
+        <LI class=top>
+          <H3 class=titZx>QQ咨询</H3>
+        </LI>
+        <LI><SPAN class=icoZx>在线咨询</SPAN></LI>
+        <LI><A class=icoTc href="http://connect.qq.com/widget/wpa/login.html?tuin=1632814245&sigT=ca2322abe747df62ff5afca32ddf9d30796fb6dd592e25d93253dc3bf90ca1873a213a8cd456ff597c189d7745aabd2e&sigU=b3e893a228ff99b04b15129fc5d26b390050e76ca0923a9a61496a22629d2fca37a3015b8e694aaf">新校尉客服</A></LI>
+       <!-- <LI><A class=icoTc href="javascript:void(0);">新校尉客服</A></LI>-->
+        <LI><A class=icoTc href="http://connect.qq.com/widget/wpa/login.html?tuin=1632814245&sigT=ca2322abe747df62ff5afca32ddf9d30796fb6dd592e25d93253dc3bf90ca1873a213a8cd456ff597c189d7745aabd2e&sigU=b3e893a228ff99b04b15129fc5d26b390050e76ca0923a9a61496a22629d2fca37a3015b8e694aaf">新校尉客服</A></LI>
+       <!-- <LI class=bot><A class=icoTc href="javascript:void(0);">新校尉客服</A></LI>-->
+      </UL>
+      <UL>
+        <LI>
+          <H3 class=titDh>电话咨询</H3>
+        </LI>
+        <LI><SPAN class=icoTl>0431-81680508</SPAN></LI>
+        <LI><SPAN class=icoTl>0431-81680509</SPAN></LI>
+      </UL>
+    </DIV>
+  </DIV>
+</DIV>
+<!-- 代码 结束 -->
 
 <!--       微信         -->
 <div id="code"></div>

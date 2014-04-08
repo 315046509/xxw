@@ -4,8 +4,8 @@ class MainController < ApplicationController
     @category_1_questions = Roll.where({:question_category_id => 1})
     @category_2_name = Roll.question_category_name(2)
     @category_2_questions = Roll.where({:question_category_id => 2})
-    @category_4_name = Journalism.question_category_name(4)
-    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
   end
 
   def user_create
@@ -33,27 +33,59 @@ class MainController < ApplicationController
     render :text => Member.check_login_exist(tel) ? "false" : "true"
   end
 
-  def campus
-    # 学校简介
+  def panoramic_campus
+    # 全景校区
     @category_1_name = Journalism.question_category_name(1)
-    @category_1_questions = Journalism.where({:question_category_id => 1}).page(params[:page]).per(1)
-    @category_4_name = Journalism.question_category_name(4)
-    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
+    @category_1_questions = Journalism.where({:question_category_id => 1})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
   end
 
-  def teacher
-    # 教师简介
-    @category_2_name = Journalism.question_category_name(2)
-    @category_2_questions = Journalism.where({:question_category_id => 2})
-    @category_4_name = Journalism.question_category_name(4)
-    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
+  def school_activities
+    # 校内活动
+    @category_2_name = Journalism.question_category_name(3)
+    @category_2_questions = Journalism.where({:question_category_id => 3})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
+  end
+
+  def transcript
+    # 历年成绩
+    @category_3_name = Journalism.question_category_name(4)
+    @category_3_questions = Journalism.where({:question_category_id => 4})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
+  end
+
+  def school_culture
+    # 学校文化
+    @category_4_name = Journalism.question_category_name(5)
+    @category_4_questions = Journalism.where({:question_category_id => 5})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
+  end
+
+  def teacher_charisma
+    # 教师风采
+    @category_5_name = Journalism.question_category_name(6)
+    @category_5_questions = Journalism.where({:question_category_id => 6})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
+  end
+
+  def at_query
+    # 分校查询
+    @category_6_name = Journalism.question_category_name(7)
+    @category_6_questions = Journalism.where({:question_category_id => 7})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
   end
 
   def contact_us
     # 联系我们
-    @category_3_name = Journalism.question_category_name(3)
-    @category_3_questions = Journalism.where({:question_category_id => 3})
-    @category_4_name = Journalism.question_category_name(4)
-    @category_4_questions = Journalism.where({:question_category_id => 4}, "title <> ''").list_random(3)
+    @category_7_name = Journalism.question_category_name(8)
+    @category_7_questions = Journalism.where({:question_category_id => 8})
+    @category_9_name = Journalism.question_category_name(9)
+    @category_9_questions = Journalism.where({:question_category_id => 9}, "title <> ''").list_random(3)
   end
 end

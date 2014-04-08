@@ -658,7 +658,8 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .box {
     width: 1000px;
-    margin: 0 auto;
+    float:left;
+    margin:7px 100px;
 }
 
 .index_main {

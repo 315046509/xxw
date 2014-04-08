@@ -1,4 +1,7 @@
-*html{padding:0px}
+* html {
+    padding: 0px
+}
+
 @charset "utf-8";
 html, body {
     font: 12px/1.8 'Microsoft YaHei', Tahoma, Verdana, 'Simsun';
@@ -667,7 +670,7 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 }
 
 .index_top {
-    margin-left: 36px;
+
     margin-top: 29px;
 }
 
@@ -731,7 +734,11 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .index_mainn {
     float: left;
-    width:
+    width: 600px;
+    overflow: hidden;
+}
+.index_mainn img {
+    width: 600px;
 }
 
 .index_bottom {

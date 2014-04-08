@@ -104,17 +104,19 @@
           <li class="nav-header hidden-tablet">导航栏</li>
 
           <li>
-            <%= link_to "<i class=\" icon-user\"></i>用户列表".html_safe, admin_accounts_path %>
+            <%= link_to "<i class=\" icon-user\"></i> 用户列表".html_safe, admin_accounts_path %>
           </li>
 
           <li>
-            <a class="ajax-link" href="<%= admin_journalisms_path %>">
-              <i class=" icon-envelope"></i>
-              <span class="hidden-tablet">信息编辑</span></a>
+            <%= link_to "<i class=\" icon-user\"></i> 信息编辑".html_safe, admin_journalisms_path %>
           </li>
 
           <li>
-            <%= link_to "<i class=\"icon-file\"></i>图片管理".html_safe, admin_roll_index_path %>
+            <%= link_to "<i class=\" icon-user\"></i> 图片管理".html_safe, admin_roll_index_path %>
+          </li>
+
+          <li>
+            <%= link_to "<i class=\" icon-user\"></i> 新闻管理".html_safe, admin_news_index_path %>
           </li>
 
         </ul>

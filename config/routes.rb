@@ -39,6 +39,8 @@ Xxw::Application.routes.draw do
     resources :journalisms
     # 伦转图片
     resources :roll
+    # 新闻
+    resources :news
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

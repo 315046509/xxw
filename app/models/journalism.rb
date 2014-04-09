@@ -1,6 +1,6 @@
 class Journalism < ActiveRecord::Base
-  validates :title, :length => {:maximum => 25, :message => "标题长度必须小于25"}
-  validates :descrpiton, :presence => {:message => "内容不能为空"}
+  validates :title, :presence => {:message => "请填写标题"}, :length => {:maximum => 25, :message => "标题必须小于25个字"}
+  validates :descrpiton, :presence => {:message => "请填写内容"}
 
   scope :order_id_desc, order("id DESC")
   scope :order_ct_desc, order("created_at DESC")

@@ -686,7 +686,7 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .index_right {
     float: right;
-    height: 414px;
+    height: 490px;
     width: 302px;
     background: url(../images/hong_07.jpg) repeat;
 }
@@ -745,8 +745,8 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .index_bottom .index_bt_left {
     float: left;
-    width: 630px;
-    margin-left: 51px;
+    width: 617px;
+    margin-left: 21px;
 }
 
 .index_bottom .index_bt_left .index_bt_lf_top {

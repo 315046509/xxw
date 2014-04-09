@@ -784,8 +784,8 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .index_bt_right {
     float: right;
-    width: 267px;
-    margin-top: 29px;
+    width: 270px;
+    margin-top: -35px;
     background: url(../images/wangz1.jpg) no-repeat;
 }
 

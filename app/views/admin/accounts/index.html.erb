@@ -86,6 +86,7 @@
           <th>邮箱地址</th>
           <th>家庭住址</th>
           <th>注册时间</th>
+          <th>操作</th>
         </tr>
         </thead>
         <tbody>
@@ -98,6 +99,7 @@
               <td><%= account.email %></td>
               <td><%= account.address %></td>
               <td class="center"><%= my_datetime_format account.created_at %></td>
+              <td><%= link_to '删除', admin_account_path(account), :method => :delete, :confirm => "删除后无法恢复，您确定要删除吗?" %></td>
             </tr>
         <% end %>
         </tbody>

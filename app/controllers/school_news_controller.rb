@@ -2,7 +2,7 @@ class SchoolNewsController < ApplicationController
   def index
     # 全部新闻
     @category_9_name = Xinwen.question_category_name(9)
-    @category_9_questions = Xinwen.where({:question_category_id => 9}, "title <> ''").page(params[:page]).per(10)
+    @category_9_questions = Xinwen.where({:question_category_id => 9}, "title <> ''").order_ct_desc.page(params[:page]).per(10)
   end
 
   def show

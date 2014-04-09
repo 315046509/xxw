@@ -3,6 +3,7 @@ class Xinwen < ActiveRecord::Base
   validates :descrpiton, :presence => {:message => "内容不能为空"}
 
   scope :order_id_desc, order("id DESC")
+  scope :order_ct_desc, order("created_at DESC")
 
   QUESTION_CATEGORYS = [["未分类", 0], ["校内新闻", 9]]
 

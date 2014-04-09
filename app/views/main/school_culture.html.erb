@@ -7,23 +7,21 @@
   <%= render 'common/navigation' %>
   <div class="box">
     <div class="index_top">
-      <div class="index_mainn">
-        <table width="600" border="0">
-          <tr>
-            <td>
-              <div class="flash">
-                <% @category_4_questions.each do |j| %>
-                    <li>
-                      <h2><%= j.title %></h2>
+      <table width="600" border="0">
+        <tr>
+          <td>
+            <div class="flash">
+              <% @category_4_questions.each do |j| %>
+                  <li>
+                    <h2><%= j.title %></h2>
 
-                      <p><%= j.descrpiton.html_safe %></p>
-                    </li>
-                <% end %>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
+                    <p><%= j.descrpiton.html_safe %></p>
+                  </li>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
   <!--               QQ   代码 开始                   -->

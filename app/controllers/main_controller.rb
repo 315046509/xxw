@@ -54,7 +54,7 @@ class MainController < ApplicationController
   def teacher_charisma
     # 教师风采
     @category_5_name = Journalism.question_category_name(6)
-    @category_5_questions = Journalism.where({:question_category_id => 6})
+    @category_5_questions = Journalism.where({:question_category_id => 6}).page(params[:page]).per(1)
   end
 
   def at_query

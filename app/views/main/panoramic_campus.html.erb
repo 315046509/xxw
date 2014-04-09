@@ -7,14 +7,12 @@
   <%= render 'common/navigation' %>
   <div class="box">
     <div class="index_top">
-      <div class="index_mainn">
-        <div class="flash">
-          <% @category_1_questions.each do |j| %>
-              <li>
-                <p><%= j.descrpiton.html_safe %></p>
-              </li>
-          <% end %>
-        </div>
+      <div class="flash">
+        <% @category_1_questions.each do |j| %>
+            <li>
+              <p><%= j.descrpiton.html_safe %></p>
+            </li>
+        <% end %>
       </div>
     </div>
   </div>

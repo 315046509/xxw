@@ -7,22 +7,23 @@
   <%= render 'common/navigation' %>
   <div class="box">
     <div class="index_top">
-      <div class="index_mainn">
-        <table width="600" border="0">
-          <tr>
-            <td>
-              <div class="flash">
-                <% @category_5_questions.each do |j| %>
-                    <li>
-                      <h2><%= j.title %></h2>
+      <table width="100%" border="0">
+        <tr>
+          <td>
+            <% @category_5_questions.each do |j| %>
+                <li>
+                  <h2><%= j.title %></h2>
 
-                      <p><%= j.descrpiton.html_safe %></p>
-                    </li>
-                <% end %>
-              </div>
-            </td>
-          </tr>
-        </table>
+                  <p><%= j.descrpiton.html_safe %></p>
+                </li>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+      <div class="pagination pagination-centered">
+        <ul>
+          <%= paginate @category_5_questions %>
+        </ul>
       </div>
     </div>
   </div>

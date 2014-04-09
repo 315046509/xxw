@@ -1,6 +1,25 @@
-* html {
-    padding: 0px
+.e {
+    /*FF OP*/
+    background-color: #FF0000
 }
+ 
+html *.e {
+    /*Sa IE7 OP*/
+    background-color: #FF00FF
+}
+ 
+* + html .e {
+    background-color: #000000; /*OP*/
+    *background-color: #0000FF;
+    /*IE7*/
+}
+
+* html .e {
+    /*IE6*/
+    background-color: #00FFFF
+}
+
+ 
 
 @charset "utf-8";
 html, body {

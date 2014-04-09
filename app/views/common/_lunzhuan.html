@@ -14,6 +14,7 @@
     #indemo {
         float: left;
         width: 1000%;
+        height: 166px;
     }
 
     #demo1 {
@@ -31,9 +32,11 @@
         <div id="demo1">
             <%if @category_2_questions.count>0%>
             <%for i in 1..@category_2_questions.length-1%>
-            <a href="<%= @category_2_questions[i-1].url%>"><img src="<%= @category_2_questions[i-1].avatar.url(:medium)%>" border="0"/></a>
+            <a href="<%= @category_2_questions[i-1].url%>">
+                <img src="<%= @category_2_questions[i-1].avatar.url(:medium)%>" border="0"/></a>
             <%end%>
-            <a href="<%= @category_2_questions[-1].url%>"><img src="<%= @category_2_questions[-1].avatar.url(:medium)%>" border="0"/></a>
+            <a href="<%= @category_2_questions[-1].url%>">
+                <img src="<%= @category_2_questions[-1].avatar.url(:medium)%>" border="0"/></a>
             <%end%>
         </div>
         <div id="demo2"></div>

@@ -10,26 +10,26 @@
       <a href="#">Home</a> <span class="divider">/</span>
     </li>
     <li>
-      <a href="<%= admin_headlines_path %>">新闻管理</a> <span class="divider">/</span>
+      <a href="<%= admin_journalisms_path %>">课程管理</a> <span class="divider">/</span>
     </li>
     <li>
-      添加新闻
+      课程修改
     </li>
   </ul>
 </div>
 <div class="row-fluid sortable ui-sortable">
   <div class="box span12">
     <div class="box-header well" data-original-title="">
-      <h2><i class="icon-edit"></i> 添加新闻</h2>
+      <h2><i class="icon-edit"></i> 课程修改</h2>
     </div>
     <div class="box-content">
-      <%= form_for(:xinwen, :url => admin_headlines_path, :id => "verifytitle", :class => "form-horizontal") do |f| %>
-          <legend>新闻添加</legend>
-          <%= f.label "新闻标题：" %>
+      <%= form_for :course, :url => admin_course_path, :method => "put", :html => {:id => "verifytitle", :class => "form-horizontal"} do |f| %>
+          <legend>信息添加</legend>
+          <%= f.label "课程名称：" %>
           <%= f.text_field :title %>
-          <%= f.label "新闻分类：" %>
-          <%= f.select :question_category_id, options_for_select(Xinwen::QUESTION_CATEGORYS) %>
-          <%= f.label "新闻内容：" %>
+          <%= f.label "课程分类：" %>
+          <%= f.select :question_category_id, options_for_select(Course::QUESTION_CATEGORYS) %>
+          <%= f.label "课程内容：" %>
           <%= f.cktext_area :descrpiton %>
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">完成提交</button>
@@ -43,12 +43,12 @@
     $().ready(function () {
         $("#verifytitle").validate({
             rules: {
-                "xinwen[descrption]": {
+                "course[descrption]": {
                     required: true
                 }
             },
             messages: {
-                "xinwen[descrption]": {
+                "course[descrption]": {
                     required: "内容不能为空"
                 }
             }

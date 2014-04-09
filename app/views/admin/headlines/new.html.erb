@@ -10,7 +10,7 @@
       <a href="#">Home</a> <span class="divider">/</span>
     </li>
     <li>
-      <a href="<%= admin_news_index_path %>">新闻管理</a> <span class="divider">/</span>
+      <a href="<%= admin_headlines_path %>">新闻管理</a> <span class="divider">/</span>
     </li>
     <li>
       添加新闻
@@ -23,7 +23,7 @@
       <h2><i class="icon-edit"></i> 添加新闻</h2>
     </div>
     <div class="box-content">
-      <%= form_for(:xinwen, :url => admin_news_index_path, :id => "verifytitle", :class => "form-horizontal") do |f| %>
+      <%= form_for(:xinwen, :url => admin_headlines_path, :id => "verifytitle", :class => "form-horizontal") do |f| %>
           <legend>信息添加</legend>
           <%= f.label "新闻标题：" %>
           <%= f.text_field :title %>

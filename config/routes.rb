@@ -6,7 +6,6 @@ Xxw::Application.routes.draw do
       post 'user_create'
       get 'check_login'
       get 'panoramic_campus'
-      get 'school_activities'
       get 'transcript'
       get 'school_culture'
       get 'teacher_charisma'
@@ -18,6 +17,8 @@ Xxw::Application.routes.draw do
   resources :school_news
   # 作品展示
   resources :works_show
+  # 校内活动
+  resources :school_activities
   # 强制使用google浏览器
   resources :google_ie
   # 后台管理
@@ -40,7 +41,7 @@ Xxw::Application.routes.draw do
     # 伦转图片
     resources :roll
     # 新闻
-    resources :news
+    resources :headlines
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

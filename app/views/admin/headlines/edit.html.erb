@@ -10,7 +10,7 @@
       <a href="#">Home</a> <span class="divider">/</span>
     </li>
     <li>
-      <a href="<%= admin_news_index_path %>">新闻管理</a> <span class="divider">/</span>
+      <a href="<%= admin_headlines_path %>">新闻活动</a> <span class="divider">/</span>
     </li>
     <li>
       新闻修改
@@ -20,16 +20,16 @@
 <div class="row-fluid sortable ui-sortable">
   <div class="box span12">
     <div class="box-header well" data-original-title="">
-      <h2><i class="icon-edit"></i> 新闻修改</h2>
+      <h2><i class="icon-edit"></i> 校内活动修改</h2>
     </div>
     <div class="box-content">
-      <%= form_for :xinwen, :url => admin_news_index_path, :method => "put", :html => {:id => "verifytitle", :class => "form-horizontal"} do |f| %>
+      <%= form_for :xinwen, :url => admin_headlines_path, :method => "put", :html => {:id => "verifytitle", :class => "form-horizontal"} do |f| %>
           <legend>信息添加</legend>
-          <%= f.label "新闻标题：" %>
+          <%= f.label "信息标题：" %>
           <%= f.text_field :title %>
-          <%= f.label "新闻分类：" %>
-          <%= f.select :question_category_id, options_for_select(Xinwen::QUESTION_CATEGORYS) %>
-          <%= f.label "新闻内容：" %>
+          <%= f.label "信息分类：" %>
+          <%= f.select :question_category_id, options_for_select(Journalism::QUESTION_CATEGORYS) %>
+          <%= f.label "信息内容：" %>
           <%= f.cktext_area :descrpiton %>
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">完成提交</button>

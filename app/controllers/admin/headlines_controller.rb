@@ -1,4 +1,4 @@
-class Admin::NewsController < ApplicationController
+class Admin::HeadlinesController < ApplicationController
   layout 'admin'
 
   def index
@@ -17,7 +17,7 @@ class Admin::NewsController < ApplicationController
     )
     if @journalism.save
       flash[:note] = "创建成功"
-      redirect_to admin_news_index_path and return
+      redirect_to admin_headlines_path and return
     else
       flash[:error_msg] = @journalism.errors.values.join(";    ")
       redirect_to :back and return
@@ -38,7 +38,7 @@ class Admin::NewsController < ApplicationController
     if update_category
       respond_to do |category|
         category.html {
-          redirect_to admin_news_index_path and return
+          redirect_to admin_headlines_path and return
         }
       end
     end
@@ -52,6 +52,6 @@ class Admin::NewsController < ApplicationController
   def destroy
     @journalism = Xinwen.find(params[:id])
     flash[:error_msg] = @journalism.destroy ? "删除成功" : "请稍后再试"
-    redirect_to admin_news_index_path and return
+    redirect_to admin_headlines_path and return
   end
 end

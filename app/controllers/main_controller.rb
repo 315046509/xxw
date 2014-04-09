@@ -39,12 +39,6 @@ class MainController < ApplicationController
     @category_1_questions = Journalism.where({:question_category_id => 1})
   end
 
-  def school_activities
-    # 校内活动
-    @category_2_name = Journalism.question_category_name(3)
-    @category_2_questions = Journalism.where({:question_category_id => 3})
-  end
-
   def transcript
     # 历年成绩
     @category_3_name = Journalism.question_category_name(4)

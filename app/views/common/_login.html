@@ -11,35 +11,45 @@
         <tr>
             <td class="text">真实姓名</td>
             <td class="input">
-                <input name="member[name]" type="text" size="30" class="input-text">
-                <label class="error sign_up_info">请输真实姓名</label>
+                <input name="member[name]" type="text" size="30" class="input-text" value="请输真实姓名"
+                       onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
             </td>
         </tr>
         <tr>
             <td class="text">邮箱地址</td>
             <td class="input">
-                <input name="member[email]" type="text" size="30" class="input-text">
-                <label class="error sign_up_info">请输真实邮箱地址</label>
+                <input name="member[email]" type="text" size="30" class="input-text" value="请输真实邮箱地址"
+                       onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
             </td>
         </tr>
         <tr>
             <td class="text">手机电话</td>
             <td class="input">
-                <input name="member[tel]" type="text" size="30" class="input-text">
-                <label class="error sign_up_info">请输真实手机号</label>
+                <input name="member[tel]" type="text" size="30" class="input-text" value="请输真实手机号"
+                       onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
             </td>
         </tr>
         <tr>
             <td class="text">家庭住址</td>
             <td class="input">
-                <input name="member[address]" type="text" size="30" class="input-text">
-                <label class="error sign_up_info">请输真实家庭住址</label>
+                <input name="member[address]" type="text" size="30" class="input-text" value="请输真实家庭住址"
+                       onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
             </td>
         </tr>
         <tr>
             <td class="text">选择性别</td>
             <td class="input">
                 <%= f.select :sex_id, options_for_select(Member::SEX_CATEGORYS) %>
+            </td>
+        </tr>
+        <tr>
+            <td class="text">验证号码</td>
+            <td class="input">
+                <input name="member[address]" type="text" size="30" class="input-text">
             </td>
         </tr>
         <tr>

@@ -3,13 +3,15 @@ class Member < ActiveRecord::Base
   validates :name, :presence => {:message => "姓名不能为空，"},
             :length => {:minimum => 2, :maximum => 20, :message => "请填写真实姓名"}
 
+  validates :card_id, :presence => {:message => "身份证不能为空，"},
+            :uniqueness => {:message => "您所填写的身份证号以申请成功，无需再次申请！感谢您的光临！"}
+
   validates :email, :presence => {:message => "邮箱地址不能为空，"},
             :format => {
                 :with => /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
                 :multiline => true,
                 :message => "请填写真实邮箱地址"
-            }
-
+            }, :uniqueness => {:message => "您所填写的邮箱地址以申请成功，无需再次申请！感谢您的光临！"}
   validates :tel, :presence => {:message => "手机号码不能为空，"},
             :uniqueness => {:message => "您所填写的手机号码以申请成功，无需再次申请！感谢您的光临！"}
 
@@ -30,6 +32,12 @@ class Member < ActiveRecord::Base
   # 检查登录名是否存在
   def Member.check_login_exist(tel)
     accounts = Member.where(:tel => tel)
+    accounts.blank? ? false : true
+  end
+
+  # 检查身份证是否存在
+  def Member.check_card_exist(card_id)
+    accounts = Member.where(:card_id => card_id)
     accounts.blank? ? false : true
   end
 end

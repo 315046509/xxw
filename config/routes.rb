@@ -5,6 +5,7 @@ Xxw::Application.routes.draw do
     collection do
       post 'user_create'
       get 'check_login'
+      get 'check_card'
       get 'panoramic_campus'
       get 'transcript'
       get 'school_culture'

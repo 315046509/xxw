@@ -11,6 +11,7 @@ class MainController < ApplicationController
   def user_create
     @member = Member.new(
         :name => params[:member][:name],
+        :card_id => params[:member][:card_id],
         :email => params[:member][:email],
         :tel => params[:member][:tel],
         :sex_id => params[:member][:sex_id],
@@ -31,6 +32,14 @@ class MainController < ApplicationController
   def check_login
     tel = params[:member][:tel]
     render :text => Member.check_login_exist(tel) ? "false" : "true"
+  end
+
+  # 身份证重复验证
+  # 如果返回true   可以使用
+  # 如果返回false   不可以使用
+  def check_card
+    tel = params[:member][:card_id]
+    render :text => Member.check_card_exist(tel) ? "false" : "true"
   end
 
   def panoramic_campus

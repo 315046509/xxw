@@ -4,6 +4,7 @@ class CreateMembers < ActiveRecord::Migration
       t.string :name, :limit => 10 #真实姓名
       t.string :email, :limit => 50 #邮箱地址
       t.string :tel, :limit => 20 #手机号码
+      t.string :card_id
       t.string :address #地址
       t.integer :sex_id, :default => 0
 

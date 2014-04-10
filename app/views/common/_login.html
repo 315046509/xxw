@@ -17,6 +17,14 @@
             </td>
         </tr>
         <tr>
+            <td class="text">身份证号</td>
+            <td class="input">
+                <input name="member[card_id]" type="text" size="30" class="input-text" value="请输身份证号码"
+                       onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
+            </td>
+        </tr>
+        <tr>
             <td class="text">邮箱地址</td>
             <td class="input">
                 <input name="member[email]" type="text" size="30" class="input-text" value="请输真实邮箱地址"

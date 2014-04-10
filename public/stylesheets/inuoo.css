@@ -625,7 +625,6 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
     float: right;
     height: 70px;
     line-height: 70px;
-    width: 55%;
 }
 
 .head_span {
@@ -641,7 +640,7 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .headder .head_mian .head_right .head_ul {
     float: right;
-    width: 120%;
+    width: 130%;
     list-style: none;
 }
 

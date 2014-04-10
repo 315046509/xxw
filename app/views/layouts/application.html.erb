@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
-<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
-<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
-<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html class="" lang="zh-cn"><!--<![endif]-->
+<!--[if lt IE 7 ]>
+<html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]>
+<html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]>
+<html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="" lang="zh-cn"><!--<![endif]-->
 <!-- saved from url=(0025)http://www.xinxiaowei.cn/ -->
+<script>
+
+    engine = null;
+    if (window.navigator.appName == "Microsoft Internet Explorer") {
+        if (document.documentMode) { // IE8
+            engine = document.documentMode;
+        } else {// IE 5-7
+            engine = 5;
+            if (document.compatMode) {
+                if (document.compatMode == "CSS1Compat") {
+                    engine = 7; // standards mode
+                }
+            }
+        }
+    }
+
+</script>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Use IE7 mode -->
-  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
   <title>长春新校尉美术学校 -艺术考生汇聚地，艺考一站式解决首选新校尉(xinxiaowei.cn)</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application", "jquery-1.9.1.min", "jquery.validate", "ch" %>
@@ -45,6 +67,7 @@
             </div>
         </div>
     </div>
+
 </script>
 <meta name="description" content="网站描述，一般显示在搜索引擎搜索结果中的描述文字，用于介绍网站，吸引浏览者点击。">
 <meta name="keywords" content="网站关键词">

@@ -20,13 +20,13 @@
                   <% for i in 1..@category_3_questions.length-1 %>
                       <li>
                         <a href="<%= @category_3_questions[i-1].url %>">
-                          <img src="<%= @category_3_questions[i-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[i-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉学员作品展示"/>
+                          <img src="<%= @category_3_questions[i-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[i-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉作品展示"/>
                         </a>
                       </li>
                   <% end %>
                   <li>
                     <a href="<%= @category_3_questions[-1].url %>">
-                      <img src="<%= @category_3_questions[-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉学员作品展示"/>
+                      <img src="<%= @category_3_questions[-1].avatar.url(:thumb) %>" data-large="<%= @category_3_questions[-1].avatar.url(:zuopin) %>" alt="image01" data-description="新校尉作品展示"/>
                     </a>
                   </li>
               <% end %>

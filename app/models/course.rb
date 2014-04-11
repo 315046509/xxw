@@ -5,7 +5,7 @@ class Course < ActiveRecord::Base
   scope :order_id_desc, order("id DESC")
   scope :order_ct_desc, order("created_at DESC")
 
-  QUESTION_CATEGORYS = [["未分类", 0], ["美术高考基础班", 1], ["高考美术集训课程", 2], ["初中高中一对一个性化辅导", 3], ["艺术类考生高考文化课冲刺班", 4]]
+  QUESTION_CATEGORYS = [["未分类", 0], ["美术基础班", 1], ["美术集训", 2], ["一对一个性化辅导", 3], ["艺术类冲刺班", 4]]
 
   def Course.question_category_name(category_id)
     QUESTION_CATEGORYS.each do |item|

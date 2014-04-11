@@ -43,31 +43,31 @@ class MainController < ApplicationController
   end
 
   def panoramic_campus
-    # 全景校区
+    # 新校尉全景
     @category_1_name = Journalism.question_category_name(1)
     @category_1_questions = Journalism.where({:question_category_id => 1})
   end
 
   def transcript
-    # 历年成绩
+    # 新校尉成绩
     @category_3_name = Journalism.question_category_name(4)
     @category_3_questions = Journalism.where({:question_category_id => 4})
   end
 
   def school_culture
-    # 学校文化
+    # 新校尉文化
     @category_4_name = Journalism.question_category_name(5)
     @category_4_questions = Journalism.where({:question_category_id => 5})
   end
 
   def teacher_charisma
-    # 教师风采
+    # 新校尉风采
     @category_5_name = Journalism.question_category_name(6)
     @category_5_questions = Journalism.where({:question_category_id => 6}).page(params[:page]).per(1)
   end
 
   def at_query
-    # 分校查询
+    # 新校尉查询
     @category_6_name = Journalism.question_category_name(7)
     @category_6_questions = Journalism.where({:question_category_id => 7})
   end

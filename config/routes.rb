@@ -18,10 +18,8 @@ Xxw::Application.routes.draw do
   resources :school_news
   # 作品展示
   resources :works_show
-  # 校内活动
+  # 新校尉活动
   resources :school_activities
-  # 课程安排
-  resources :courses
   # 强制使用google浏览器
   resources :google_ie
   # 后台管理
@@ -45,8 +43,6 @@ Xxw::Application.routes.draw do
     resources :roll
     # 新闻
     resources :headlines
-    # 课程安排
-    resources :courses
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def index
     @category_1_name = Roll.question_category_name(1)
-    @category_1_questions = Roll.where({:question_category_id => 1})
+    @category_1_questions = Roll.where({:question_category_id => 1}).order_ct_desc.limit(15)
     @category_2_name = Roll.question_category_name(2)
     @category_2_questions = Roll.where({:question_category_id => 2})
     @category_9_name = Xinwen.question_category_name(9)
@@ -48,12 +48,6 @@ class MainController < ApplicationController
     @category_1_questions = Journalism.where({:question_category_id => 1})
   end
 
-  def transcript
-    # 新校尉成绩
-    @category_3_name = Journalism.question_category_name(4)
-    @category_3_questions = Journalism.where({:question_category_id => 4})
-  end
-
   def school_culture
     # 新校尉文化
     @category_4_name = Journalism.question_category_name(5)
@@ -61,13 +55,13 @@ class MainController < ApplicationController
   end
 
   def teacher_charisma
-    # 新校尉风采
+    # 新校尉团队
     @category_5_name = Journalism.question_category_name(6)
     @category_5_questions = Journalism.where({:question_category_id => 6}).page(params[:page]).per(1)
   end
 
   def at_query
-    # 新校尉查询
+    # 新校尉地址查询
     @category_6_name = Journalism.question_category_name(7)
     @category_6_questions = Journalism.where({:question_category_id => 7})
   end

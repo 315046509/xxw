@@ -731,7 +731,7 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
     float: left;
     width: 680px;
     overflow: hidden;
-    height: 445px;
+    height: 100%;
 }
 
 .index_bottom {

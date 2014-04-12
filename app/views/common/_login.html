@@ -4,8 +4,7 @@
         <img class="imgg" src="/images/diyibu_07.jpg">
         <img class="imgga" src="/images/spa1_07.jpg">
     </div>
-    <%= form_for(:member, :url => user_create_main_index_path, :method => :post, :html => {:id =>
-    "user_signup"}) do |f| %>
+    <%= form_for(:member, :url => user_create_main_index_path, :method => :post) do |f| %>
     <table class="feedback_table">
         <tbody>
         <tr>
@@ -68,52 +67,5 @@
         </tbody>
     </table>
     <% end %>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(function () {
-                $("#user_signup").validate({
-                    rules: {
-                        "member[name]": {
-                            required: true,
-                            minlength: 2,
-                            maxlength: 20
-                        },
-                        "member[email]": {
-                            required: true
-                        },
-                        "member[tel]": {
-                            required: true,
-                            mobile: true,
-                            rangelength: [11, 11]
-                        },
-                        "member[address]": {
-                            required: true
-                        }
-                    },
-                    messages: {
-                        "member[name]": {
-                            required: "请输真实姓名",
-                            minlength: "请输真实姓名",
-                            maxlength: "请输真实姓名"
-                        },
-                        "member[email]": {
-                            required: "请输入邮箱地址"
-                        },
-                        "member[tel]": {
-                            required: "手机不能为空！",
-                            mobile: "手机格式不正确!",
-                            rangelength: "请输入正确的手机号码！"
-                        },
-                        "member[address]": {
-                            required: "家庭住址不能为空！"
-                        }
-                    },
-                    errorPlacement: function (error, element) {
-                        error.appendTo(element.parent());
-                    }
-                });
-            });
-        });
-    </script>
 </div>
 <div class="clear"></div>

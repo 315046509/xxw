@@ -640,7 +640,7 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .headder .head_mian .head_right .head_ul {
     float: right;
-    width: 130%;
+    width: 110%;
     list-style: none;
 }
 
@@ -729,8 +729,9 @@ nav ul li.hover a:hover, nav ul li.navdown a:hover {
 
 .index_mainn {
     float: left;
-    width: 630px;
+    width: 680px;
     overflow: hidden;
+    height: 445px;
 }
 
 .index_bottom {

@@ -5,7 +5,7 @@ class Xinwen < ActiveRecord::Base
   scope :order_id_desc, order("id DESC")
   scope :order_ct_desc, order("created_at DESC")
 
-  QUESTION_CATEGORYS = [["未分类", 0], ["校内新闻", 9]]
+  QUESTION_CATEGORYS = [["未分类", 0], ["新校尉新闻", 9]]
 
   def Xinwen.question_category_name(category_id)
     QUESTION_CATEGORYS.each do |item|

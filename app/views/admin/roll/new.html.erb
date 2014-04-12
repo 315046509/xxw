@@ -7,7 +7,7 @@
 <div class="row-fluid sortable">
   <div class="box span12">
     <div class="box-header well" data-original-title>
-      <h2><i class="icon-list-alt"></i>添加轮转</h2>
+      <h2><i class="icon-list-alt"></i>添加图片</h2>
     </div>
     <div class="box-content">
       <div id="content" class="span10" style="padding: 20px">
@@ -23,7 +23,10 @@
                 </div>
             <% end %>
             <div class="codeExplanation">
-              <p>建议幻灯片图片尺寸：342x250（像素），轮转图片尺寸：220x160（像素），作品展示尺寸：640x480（像素）</p>
+              <p>
+                注：所有图片命名以字母或数字方式上传,例：“a.jpg”，“a1.jpg”，“a01.jpg”<br/>
+                图片墙尺寸：600x400（像素），轮转尺寸：220x160（像素），作品展示：640x480（像素）
+              </p>
             </div>
             <div class="field">
               <span>图片分类：</span>
@@ -39,7 +42,7 @@
 
             <div class="field">
               <span>图片链接：</span>
-              <%= f.text_field :url, :value => '#' %>
+              <%= f.text_field :url, :value => '/' %>
             </div>
             </br>
             <div class="form-actions">

@@ -1,27 +1,10 @@
-<!-- 代码 开始 -->
-<div class="www51buycom">
-    <ul class="51buypic">
+<div id='container' width="320" height="460">
+    <div id='content'>
         <%if @category_1_questions.count>0%>
         <%for i in 1..@category_1_questions.length-1%>
-        <li><a href="<%= @category_1_questions[i-1].url%>"><img src="<%= @category_1_questions[i-1].avatar.url(:thumb1)%>" border="0"/></a></li>
+        <img src="<%= @category_1_questions[i-1].avatar.url(:thumb1)%>" border="0"/>
         <%end%>
-        <li><a href="<%= @category_1_questions[-1].url%>"><img src="<%= @category_1_questions[-1].avatar.url(:thumb1)%>" border="0"/></a></li>
+        <img src="<%= @category_1_questions[-1].avatar.url(:thumb1)%>" border="0"/>
         <%end%>
-    </ul>
+    </div>
 </div>
-<script>
-    /*鼠标移过，左右按钮显示*/
-    $(".www51buycom").hover(function () {
-        $(this).find(".prev,.next").fadeTo("show", 0.1);
-    }, function () {
-        $(this).find(".prev,.next").hide();
-    })
-    /*鼠标移过某个按钮 高亮显示*/
-    $(".prev,.next").hover(function () {
-        $(this).fadeTo("show", 0.7);
-    }, function () {
-        $(this).fadeTo("show", 0.1);
-    })
-    $(".www51buycom").slide({ titCell: ".num ul", mainCell: ".51buypic", effect: "fade", autoPlay: true, delayTime: 5000, autoPage: true });
-</script>
-<!-- 代码 结束 -->

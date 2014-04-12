@@ -2,16 +2,18 @@ class Roll < ActiveRecord::Base
   validates :url, :presence => {:message => "链接为空！"}
 
   attr_accessor :avatar
-  has_attached_file :avatar, :styles => {:medium => "220x160#", :thumb => "68x48#", :thumb1 => "342x250#", :zuopin => "640x480#"}, :default_url => "/images/:style/missing.png",
+  has_attached_file :avatar, :styles => {:medium => "220x160#", :thumb => "68x48#", :thumb1 => "600x400#", :zuopin => "640x480#"}, :default_url => "/images/:style/missing.png",
                     :url => "/roll/:id_partition/:style/:filename"
   validates_attachment_size :avatar, :less_than => 2.megabytes
   validates_attachment_content_type :avatar, :content_type => ['image/png', 'image/x-png', 'image/jpeg', 'image/pjpeg', 'image/jpg']
+
+  scope :order_ct_desc, lambda { order("created_at DESC") }
 
   @filepath="public/roll/"
   @previewpath = "previews/"
 
   # 分类
-  QUESTION_CATEGORYS = [["未分类", 0], ["幻灯片", 1], ["轮转", 2], ["作品展示", 3]]
+  QUESTION_CATEGORYS = [["未分类", 0], ["图片墙", 1], ["轮转", 2], ["作品展示", 3]]
 
   def Roll.question_category_name(category_id)
     QUESTION_CATEGORYS.each do |item|

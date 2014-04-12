@@ -5,7 +5,7 @@ class Journalism < ActiveRecord::Base
   scope :order_id_desc, order("id DESC")
   scope :order_ct_desc, order("created_at DESC")
 
-  QUESTION_CATEGORYS = [["未分类", 0], ["新校尉全景", 1], ["新校尉活动", 3], ["新校尉文化", 5], ["新校尉团队", 6], ["新校尉地址", 7], ["联系我们", 8]]
+  QUESTION_CATEGORYS = [["未分类", 0], ["新校尉简介", 5], ["新校尉团队", 6], ["联系我们", 8]]
 
   def Journalism.question_category_name(category_id)
     QUESTION_CATEGORYS.each do |item|

@@ -42,14 +42,8 @@ class MainController < ApplicationController
     render :text => Member.check_card_exist(tel) ? "false" : "true"
   end
 
-  def panoramic_campus
-    # 新校尉全景
-    @category_1_name = Journalism.question_category_name(1)
-    @category_1_questions = Journalism.where({:question_category_id => 1})
-  end
-
   def school_culture
-    # 新校尉文化
+    # 新校尉简介
     @category_4_name = Journalism.question_category_name(5)
     @category_4_questions = Journalism.where({:question_category_id => 5})
   end
@@ -58,12 +52,6 @@ class MainController < ApplicationController
     # 新校尉团队
     @category_5_name = Journalism.question_category_name(6)
     @category_5_questions = Journalism.where({:question_category_id => 6}).page(params[:page]).per(1)
-  end
-
-  def at_query
-    # 新校尉地址查询
-    @category_6_name = Journalism.question_category_name(7)
-    @category_6_questions = Journalism.where({:question_category_id => 7})
   end
 
   def contact_us

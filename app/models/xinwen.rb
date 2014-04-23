@@ -2,8 +2,7 @@ class Xinwen < ActiveRecord::Base
   validates :title, :presence => {:message => "新闻标题不能为空，"}, :length => {:maximum => 25, :message => "标题长度必须小于25"}
   validates :descrpiton, :presence => {:message => "内容不能为空"}
 
-  scope :order_id_desc, order("id DESC")
-  scope :order_ct_desc, order("created_at DESC")
+  scope :order_ct_desc, lambda { order("created_at DESC") }
 
   QUESTION_CATEGORYS = [["未分类", 0], ["新校尉新闻", 9]]
 

@@ -2,7 +2,7 @@ class Admin::JournalismsController < Admin::MainController
   layout 'admin'
 
   def index
-    @journalisms = Journalism.order_id_desc.page(params[:page]).per(10)
+    @journalisms = Journalism.order_ct_desc.page(params[:page]).per(10)
   end
 
   def new

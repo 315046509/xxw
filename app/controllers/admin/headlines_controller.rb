@@ -2,7 +2,7 @@ class Admin::HeadlinesController < Admin::MainController
   layout 'admin'
 
   def index
-    @journalisms = Xinwen.order_id_desc.page(params[:page]).per(10)
+    @journalisms = Xinwen.order_ct_desc.page(params[:page]).per(10)
   end
 
   def new

@@ -1,4 +1,4 @@
-class Admin::RollController < ApplicationController
+class Admin::RollController < Admin::MainController
   layout 'admin'
   before_action :roll_params, only: [:create]
   before_filter :get_roll, only: [:destroy]

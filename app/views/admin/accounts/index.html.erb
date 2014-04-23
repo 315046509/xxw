@@ -26,9 +26,7 @@
           <th>手机号查询</th>
           <th>性别查询</th>
           <th>住址查询</th>
-          <th>时间查询</th>
           <th>搜索</th>
-          <th>重置</th>
         </tr>
         </thead>
         <tbody>
@@ -46,22 +44,15 @@
               <%= text_field_tag "tel", "", :id => "tel", :class => "id_search" %>
             </td>
             <!--性别-->
-            <td><%= select_tag :sex_id, options_for_select("女士" => 1, "先生" => 0), prompt: "请选择", :class => "id_search" %></td>
+            <td><%= select_tag :sex_id, options_for_select("女士" => 1, "先生" => 0), :prompt => "请选择", :class => "id_search" %></td>
             <!--住址-->
             <td>
               <%= text_field_tag "address", "", :id => "address", :class => "id_search" %>
-            </td>
-            <!--时间-->
-            <td>
-              <%= text_field_tag :start_time, params[:start_time], :class => "date_search" %>
-              ~ <%= text_field_tag :final_time, params[:final_time], :class => "date_search" %>
             </td>
             <!--搜索-->
             <td>
               <%= submit_tag "查询" %>
             </td>
-            <!--重置-->
-            <td><input id="btn1" type="button" value="重置"/></td>
         <% end %>
         </tbody>
       </table>
@@ -116,15 +107,3 @@
   <!--/span-->
 
 </div><!--/row-->
-<script src="/admin/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#btn1").click(function () {
-            $(":text").val("");
-            setInterval(window.location.href = "accounts")
-        });
-        $('.date_search').datepicker({
-            format: 'yyyy-mm-dd'
-        });
-    });
-</script>

@@ -9,8 +9,6 @@ class Admin::AccountsController < Admin::MainController
     @accounts = @accounts.where("email like ?", "%#{params[:email]}%") unless params[:email].blank?
     @accounts = @accounts.where("sex_id like ?", "%#{params[:sex_id]}%") unless params[:sex_id].blank?
     @accounts = @accounts.where("address like ?", "%#{params[:address]}%") unless params[:address].blank?
-    @accounts = @accounts.where("created_at >= ?", params[:begin_time]) unless params[:begin_time].blank?
-    @accounts = @accounts.where("created_at < ?", params[:end_time]+" 24:00:00") unless params[:end_time].blank?
     @accounts = @accounts.page(params[:page]).per(20)
   end
 
